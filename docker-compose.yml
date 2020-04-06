@@ -1,0 +1,31 @@
+version: '3'
+services:
+    web:
+        image: crud-teste
+        build: .
+        # o local onde esta especificado o Dockerfile
+        command: node src/index.js 
+        # inicializa o servidor da aplicação onde atualiza a cada alteração no BD
+        ports:
+        - "3000:3000"
+        # mapeamento das portas entre container e máquina
+        volumes:
+          - ./teste_crud/usr/src/app
+          - /usr/src/app/node_modules
+        # diretórios que precisar estar contidos no container
+        depends_on:
+          - "mongo"
+        # marca dependencia de outra imagem/container
+        links:
+          - "mongo"
+    mongo:
+        image: mongo
+        ports:
+            - "27017:27017"
+        # porta de conexão do banco de dados MongoDB
+        restart: always
+    
+    mongo_express:
+      image: "mongo-express"
+      ports:
+        - "8081:8081"
