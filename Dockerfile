@@ -19,5 +19,5 @@ COPY . .
 EXPOSE 3000
 # porta da aplicação pra web/browser
 
-CMD ["node", "src/index.js"]
+CMD ["node", "src/app.js"]
 # starta a aplicação

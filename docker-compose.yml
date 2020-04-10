@@ -4,7 +4,7 @@ services:
         image: crud-teste
         build: .
         # o local onde esta especificado o Dockerfile
-        command: node src/index.js 
+        command: node src/app.js 
         # inicializa o servidor da aplicação onde atualiza a cada alteração no BD
         ports:
         - "3000:3000"
