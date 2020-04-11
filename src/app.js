@@ -10,10 +10,11 @@ app.listen(3000, () => {
     console.log('escutando na porta 3000, aberto para requisições');
 });
 
-app.set('views', path.join(__dirname, 'view'));
+app.use(express.static('public'));
+app.set('views', path.join(__dirname, '/view'));
 app.set('view engine', 'ejs');
 // view engine é a ferramenta que será usada para ser feita
-// a visão(front) da plicação na qual vai ser utilizada ejs
+// a visão(front) da aplicação na qual vai ser utilizada ejs
 
 app.get('/', (requisicao, resultado) => {
     resultado.render('index');
