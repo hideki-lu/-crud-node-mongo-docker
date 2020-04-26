@@ -1,0 +1,10 @@
+<h2>Buscar Gatos</h2>
+<form action="/gatos" method="GET">
+  <label>Nome</label>
+  <input type="text" name="nome" value="<%= opcoes_de_busca.nome %>">
+  <button type="submit">Buscar</button>
+</form>
+<br>
+<% gatos.forEach(gato => { %>
+  <div><%= gato.nome %></div>
+<% }); %>

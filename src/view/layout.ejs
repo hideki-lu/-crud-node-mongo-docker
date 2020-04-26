@@ -6,9 +6,12 @@
         <link rel="stylesheet" href="/styles/style.css">
     </head>
     <body>
-        <header>cabeçalho</header> 
+        <header>
+        </header> 
         <main>conteudo</main>
-        <%- body %> 
+        <%- include( './parciais/cabecalho.ejs') %> 
+        <%- include( './parciais/mensagem_de_erro.ejs') %> 
+        <%- body %>
         <footer>rodapé</footer>
     </body>
 </html>
