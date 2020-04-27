@@ -1,1 +1,6 @@
-meio mais ou menos
+<h2>Recentemente Publicados</h2>
+<div>
+    <% blog_posts.forEach(blog_post => { %>
+        <img height="150" width="100" src="<%= blog_post.capa_caminho_imagem %>">
+    <% }); %>
+</div>

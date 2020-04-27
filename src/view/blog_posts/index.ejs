@@ -1,0 +1,17 @@
+<h2>Buscar Publicações</h2>
+<form action="/blog_posts" method="GET">
+    <div>
+        <label>Titulo</label>
+        <input type="text" name="titulo" value="<%= opcoes_de_busca.titulo %>">
+    </div>
+    <div>
+        <label>Postado no dia</label>
+        <input type="date" name="data_publicacao" value="<%= opcoes_de_busca.data_publicacao %>">
+    </div>
+  <button type="submit">Buscar</button>
+</form>
+<div>
+    <% blog_posts.forEach(blog_post => { %>
+        <img height="150" width="100" src="<%= blog_post.capa_caminho_imagem %>">
+    <% }); %>
+</div>

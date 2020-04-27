@@ -9,6 +9,7 @@ const app = express();
 // rotas os modelos do app ou controladoras do MVC
 const rota_principal = require('./routes/index');
 const rota_gato = require('./routes/gatos');
+const rota_blog_post = require('./routes/blogposts');
 
 // view engine é a ferramenta que será usada para ser feita
 // a visão(front) da aplicação na qual vai ser utilizada ejs
@@ -29,6 +30,7 @@ banco_de_dados.once('open', () => console.log('conexão com mongoose estabelecid
 // rotas da aplicação
 app.use('/', rota_principal);
 app.use('/gatos', rota_gato);
+app.use('/blog_posts', rota_blog_post);
 
 
 app.listen(3000, () => {
