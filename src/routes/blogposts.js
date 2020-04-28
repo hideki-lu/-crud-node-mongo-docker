@@ -28,7 +28,7 @@ router
         const blog_posts = await query.exec();
         resposta.render('blog_posts/index', {
             blog_posts: blog_posts,
-            searchOption: requisicao.query
+            opcoes_de_busca: requisicao.query
         });
     }
     catch { resposta.redirect('/'); }
