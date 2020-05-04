@@ -1,0 +1,23 @@
+# Visão em EJS
+Embendded [JavaScript templating (EJS)](https://ejs.co/) é uma biblioteca para manipulação de elementos de documentos Web usando JavaScript a partir de uma aplicação Node.js.
+
+A sua utilização é identica a escrever um documento HTML a única diferença são sintaxes próprias da biblioteca que permitem outras funcionalidades de manipulação de captura e envio de dados, e particionamentos do documento.
+Algumas sintaxes que encontrará pelo trabalho:
+
+```javascript
+<%  // inserção de código .js que não possui saída ou entrada de dados %>
+
+<%= // escrita de valores de um código para um elemento HTML %>
+
+<%- // escreve dados que não compõem elementos HTML %>
+    // ex: importar um arquivo .ejs que compõe um módulo do documento HTML
+``` 
+
+#### Estrutura da construção da DOM usando EJS.
+![Imagem da estrutura da visão](main_view.png)
+
+#### A hierarquia de pastas e arquivos feita para organizar a visão da aplicação na estrutura a seguir.
+![Hierarquia da visão](visao.png)
+
+### O diretório `/public` contém os estilos e dinamicidade da DOM
+![pasta public]()

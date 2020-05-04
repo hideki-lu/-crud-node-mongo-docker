@@ -1,0 +1,11 @@
+# Controladora Express
+a biblioteca Express permite a construção da aplicação em Node.js para ser utilizada na web, e para realizar tal tarefa ele comunica com a biblioteca de visão EJS e a partir de seus arquivos na pasta de rotas, definem o tratamento de dados vindo da visão que se tornarão objetos javascript para manipular no banco de dados.
+![Imagem hierarquia controladora](controla.png)
+
+
+# Modelo Mongoose
+A partir de arquivos `.js` é possível definir modelos de dados baseados em objetos javascript e criar as "tabelas" no banco de dados Mongodb no qual são denominadas Schemas.
+
+![Imagem hierarquia do modelo](modelo.png)
+
+Uma vez definidas, a prórpia biblioteca Mongoose permite configuração de comunicação com a aplicação Node.js, e realizar as operações de inserção, alteração, remoção e busca dos documentos inseridos no banco de dados.
